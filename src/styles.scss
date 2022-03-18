@@ -1,8 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; width: 100%;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .container{
   margin: 20px 80px;
   width: 80%;
+}
+.top-content{
+  top: 64px;
+}
+/* xlg - Large Devices (Landscape Tablets & Mediam Desktop  )  */
+@media (min-width: 1920px) and (max-width: 2560px){
+  .container{
+    margin: 20px 0;
+    width: 95%;
+  }
+}
+/* lg - Large Devices (Landscape Tablets & Mediam Desktop  )  */
+@media (min-width: 1280px) and (max-width: 1919px){
+  .container{
+    margin: 20px 0;
+    width: 95%;
+  }
+}
+/* md - Media Devices (Landscape Tablets & Mediam Desktop  )  */
+@media (min-width: 960px) and (max-width: 1279px){
+  .container{
+    margin: 20px 0;
+    width: 95%;
+  }
+}
+/* sm - Small Devices (Portrait Tablets and Small desktop ) */
+@media (min-width: 600px) and (max-width: 959px){
+  .container{
+    margin: 20px 0;
+    width: 95%;
+  }
+}
+/* xs - Extra Small Devices (Landscape phones & Portrait Tablets) */ 
+@media (max-width: 599px){
+  .top-content{
+    top: 56px;
+  }
+  .container{
+    margin: 41px 0;
+    width: 95%;
+  }
+}
+@media (max-width: 320px){
+  .top-content{
+    top: 56px;
+  }
 }

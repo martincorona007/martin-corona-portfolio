@@ -1,13 +1,17 @@
 
-<div [class.example-is-mobile]="mobileQuery.matches" style="height: 100%;">
+<div [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar class="nav-bar"  >
     <!--MOBILE-->
-    <mat-toolbar-row fxShow="false" fxShow.lt-sm="true" style="background-color: #FF6A00; z-index: 2; padding: 0px;"
-    >
+    <mat-toolbar-row fxShow="false" fxShow.lt-sm="true" style="background-color: #FF6A00; z-index: 2; padding: 0px;">
       <div style="margin: 0px;" fxLayoutAlign="center center">
         <div fxLayout="row">
-          <button mat-icon-button class="example-icon" (click)="snav.toggle()">
-            <mat-icon>menu</mat-icon>
+          <button mat-icon-button class="example-icon" *ngIf="isActiveMenu" (click)="snav.toggle()" (click)="clickOn()">
+            <mat-icon >clear</mat-icon>
+            
+          </button>
+          <button mat-icon-button class="example-icon" *ngIf="isActiveContent" (click)="snav.toggle()" (click)="clickOff()">
+            <mat-icon >menu</mat-icon>
+            
           </button>
           <span>My App</span>
           <span class="example-spacer"></span>
@@ -43,13 +47,13 @@
   </mat-toolbar>
   
   <mat-sidenav-container>
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" style="width: 100%;">
       AAAAA
     </mat-sidenav>
-    <mat-sidenav-content style="background-color: #ffffff !important">
-     <div>
+    <mat-sidenav-content style="background-color: #ffffff !important" *ngIf="isActiveContent" class="top-content">
+     
       <router-outlet></router-outlet>
-     </div>
+      <app-footer></app-footer>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
