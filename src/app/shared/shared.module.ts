@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FooterComponent } from './footer/footer.component';
+import {MatCardModule} from '@angular/material/card';
 const coponents = [
   FooterComponent
 ];
@@ -22,7 +23,7 @@ const materialModules = [
   MatInputModule,
   MatButtonModule,
   MatSidenavModule,
-  
+  MatCardModule
 ];
 const angularModules = [
   FormsModule,

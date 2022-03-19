@@ -9,11 +9,37 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .top-content{
   top: 64px;
 }
+.img-rounded {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 195px;
+  //height: 240px;
+}
+.back-image{
+  //background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+ }
+ .background-image-home{
+  background-image: url('./assets/imgs/home/background_home.jpg');
+ }
 /* xlg - Large Devices (Landscape Tablets & Mediam Desktop  )  */
 @media (min-width: 1920px) and (max-width: 2560px){
   .container{
     margin: 20px 0;
     width: 95%;
+  }
+  .photo-img-size{
+  width: 330px; 
+  height: 330px;
+  }
+  .photo-img-size{
+    width: 608px !important; 
+    height: 565px !important;
+  }
+  .home-size-section{
+    padding: 306px 0px ;
   }
 }
 /* lg - Large Devices (Landscape Tablets & Mediam Desktop  )  */
@@ -22,6 +48,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 20px 0;
     width: 95%;
   }
+  .photo-img-size{
+    width: 369px !important; 
+    height: 369px !important;
+  }
+  .home-size-section{
+    padding: 160px 0px ;
+  }
 }
 /* md - Media Devices (Landscape Tablets & Mediam Desktop  )  */
 @media (min-width: 960px) and (max-width: 1279px){
@@ -29,12 +62,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 20px 0;
     width: 95%;
   }
+  .photo-img-size{
+    width: 294px !important; 
+    height: 300px !important;
+  }
+  .home-size-section{
+    padding: 132px 0px ;
+  }
 }
 /* sm - Small Devices (Portrait Tablets and Small desktop ) */
 @media (min-width: 600px) and (max-width: 959px){
   .container{
     margin: 20px 0;
     width: 95%;
+  }
+  .photo-img-size{
+    width: 212px !important; 
+    height: 225px !important;
+  }
+  .home-size-section{
+    padding: 74px 0px ;
   }
 }
 /* xs - Extra Small Devices (Landscape phones & Portrait Tablets) */ 
@@ -46,9 +93,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 41px 0;
     width: 95%;
   }
+  .background-image-home{
+    background-image: url('./assets/imgs/home/background_home_p.jpg');
+   }
+   .photo-img-size{
+    width: 140px !important; 
+    height: 246px !important;
+  }
+  .home-size-section{
+    padding: 82px 0px ;
+  }
 }
 @media (max-width: 320px){
   .top-content{
     top: 56px;
   }
+  .background-image-home{
+    background-image: url('./assets/imgs/home/background_home_p.jpg');
+   }
 }
