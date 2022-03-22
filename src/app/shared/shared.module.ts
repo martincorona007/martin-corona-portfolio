@@ -12,6 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FooterComponent } from './footer/footer.component';
 import {MatCardModule} from '@angular/material/card';
+import { AngularEmojisModule } from 'angular-emojis';
+const npmModules = [
+  AngularEmojisModule
+];
 const coponents = [
   FooterComponent
 ];
@@ -40,12 +44,14 @@ const angularModules = [
   imports: [
     CommonModule,
     materialModules,
-    angularModules
+    angularModules,
+    npmModules
   ],
   exports: [
     materialModules,
     angularModules,
-    coponents
+    coponents,
+    npmModules
   ],
 })
 export class SharedModule { }

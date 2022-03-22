@@ -9,6 +9,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .top-content{
   top: 64px;
 }
+.back-shadow{
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
 .img-rounded {
   object-fit: cover;
   width: 100%;
