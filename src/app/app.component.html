@@ -2,7 +2,7 @@
 <div [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar class="nav-bar"  >
     <!--MOBILE-->
-    <mat-toolbar-row fxShow="false" fxShow.lt-sm="true" style="background-color: #FF6A00; z-index: 2; padding: 0px;">
+    <mat-toolbar-row fxShow="false" fxShow.lt-sm="true" style=" z-index: 2; padding: 0px;">
       <div style="margin: 0px;" fxLayoutAlign="center center">
         <div fxLayout="row">
           <button mat-icon-button class="example-icon" *ngIf="isActiveMenu" (click)="snav.toggle()" (click)="clickOn()">
@@ -13,35 +13,43 @@
             <mat-icon >menu</mat-icon>
             
           </button>
-          <span>My App</span>
-          <span class="example-spacer"></span>
+          
+          
+        </div>
+        <div fxLayout="row"  fxLayoutAlign="center center" style="padding-right: 47px;">
+          <img src="./assets/imgs/logos/logo.png" style="width: 50%;">
         </div>
       </div>
 
   
     </mat-toolbar-row>
     <!--TABLET LAPTOP 4K-->
-    <mat-toolbar-row fxShow="false" fxShow.gt-xs="true" class="nav-bar" style="background-color: #FF6A00; z-index: 2; padding: 0px;">
-      <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-raised-button>
-      HOME
-    </button>
-    <button mat-raised-button >
-      ABOUT
-    </button>
-    <button mat-raised-button>
-      EXPERIENCE
-    </button>
-    <button mat-raised-button>
-      PROJECTS
-    </button>
-    <button mat-raised-button>
-      BLOGS
-    </button>
-    <button mat-raised-button>
-      CONTACT
-    </button>
+    <mat-toolbar-row fxShow="false" fxShow.gt-xs="true" fxLayoutAlign="space-between center" class="nav-bar" style=" z-index: 2; padding: 0px;">
+    <div fxLayout="row"  >
+      <img src="./assets/imgs/logos/logo.png" style="height:100%; width: 100%;">
+    </div>
+    <div fxLayout="row"  >
+      <button mat-button>
+        HOME
+      </button>
+      <button mat-button>
+        ABOUT
+      </button>
+      <button mat-button>
+        EXPERIENCE
+      </button>
+      <button mat-button>
+        PROJECTS
+      </button>
+      <button mat-button>
+        BLOGS
+      </button>
+      <button mat-button>
+        CONTACT
+      </button>
+    </div>    
+  
+   
   
     </mat-toolbar-row>
   </mat-toolbar>

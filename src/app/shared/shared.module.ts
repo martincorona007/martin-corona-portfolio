@@ -13,6 +13,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FooterComponent } from './footer/footer.component';
 import {MatCardModule} from '@angular/material/card';
 import { AngularEmojisModule } from 'angular-emojis';
+import {MatDividerModule} from '@angular/material/divider';
 const npmModules = [
   AngularEmojisModule
 ];
@@ -27,7 +28,8 @@ const materialModules = [
   MatInputModule,
   MatButtonModule,
   MatSidenavModule,
-  MatCardModule
+  MatCardModule,
+  MatDividerModule
 ];
 const angularModules = [
   FormsModule,

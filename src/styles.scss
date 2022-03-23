@@ -1,17 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; width: 100%;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Quicksand, "Helvetica Neue", sans-serif; }
 .container{
-  margin: 20px 80px;
+  margin: 20px 80px ;
   width: 80%;
+}
+.container-home{
+  //margin: 20px 80px;
+  width: 100%;
 }
 .top-content{
   top: 64px;
 }
-.back-shadow{
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-}
+
 .img-rounded {
   object-fit: cover;
   width: 100%;
@@ -30,7 +32,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* xlg - Large Devices (Landscape Tablets & Mediam Desktop  )  */
 @media (min-width: 1920px) and (max-width: 2560px){
   .container{
-    margin: 20px 0;
+    margin: 20px 64px;
     width: 95%;
   }
   .photo-img-size{
@@ -48,7 +50,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* lg - Large Devices (Landscape Tablets & Mediam Desktop  )  */
 @media (min-width: 1280px) and (max-width: 1919px){
   .container{
-    margin: 20px 0;
+    margin: 20px 36px;
     width: 95%;
   }
   .photo-img-size{
@@ -62,7 +64,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* md - Media Devices (Landscape Tablets & Mediam Desktop  )  */
 @media (min-width: 960px) and (max-width: 1279px){
   .container{
-    margin: 20px 0;
+    margin: 20px 26px;
     width: 95%;
   }
   .photo-img-size{
@@ -76,7 +78,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* sm - Small Devices (Portrait Tablets and Small desktop ) */
 @media (min-width: 600px) and (max-width: 959px){
   .container{
-    margin: 20px 0;
+    margin: 20px 20px;
     width: 95%;
   }
   .photo-img-size{
@@ -93,7 +95,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     top: 56px;
   }
   .container{
-    margin: 41px 0;
+    margin: 40px 10px;
     width: 95%;
   }
   .background-image-home{
