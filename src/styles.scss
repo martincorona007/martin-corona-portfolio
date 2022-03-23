@@ -29,6 +29,10 @@ body { margin: 0; font-family: Quicksand, "Helvetica Neue", sans-serif; }
  .background-image-home{
   background-image: url('./assets/imgs/home/background_home.jpg');
  }
+ .font-medium-bold{
+   font-size: 16px !important;
+   font-weight: 600 !important;
+ }
 /* xlg - Large Devices (Landscape Tablets & Mediam Desktop  )  */
 @media (min-width: 1920px) and (max-width: 2560px){
   .container{
@@ -91,6 +95,9 @@ body { margin: 0; font-family: Quicksand, "Helvetica Neue", sans-serif; }
 }
 /* xs - Extra Small Devices (Landscape phones & Portrait Tablets) */ 
 @media (max-width: 599px){
+  .bottom-padding{
+    padding: 16px;
+  }
   .top-content{
     top: 56px;
   }
