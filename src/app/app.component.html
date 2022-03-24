@@ -58,7 +58,7 @@
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" style="width: 100%;">
       AAAAA
     </mat-sidenav>
-    <mat-sidenav-content style="background-color: #ffffff !important" *ngIf="isActiveContent" class="top-content">
+    <mat-sidenav-content style="background-color: #ffffff !important" *ngIf="isActiveContent" class="top-content" style="margin-bottom: 56px;" >
      
       <router-outlet></router-outlet>
       
