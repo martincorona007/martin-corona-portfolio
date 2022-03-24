@@ -13,7 +13,13 @@ body { margin: 0; font-family: Quicksand, "Helvetica Neue", sans-serif; }
 .top-content{
   top: 64px;
 }
-
+.padding-full{
+  padding: 8px;
+}
+.imgs-style{
+  border-radius: 34px;
+  
+}
 .img-rounded {
   object-fit: cover;
   width: 100%;

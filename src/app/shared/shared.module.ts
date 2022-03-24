@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import {MatCardModule} from '@angular/material/card';
 import { AngularEmojisModule } from 'angular-emojis';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatTableModule} from '@angular/material/table';
 const npmModules = [
   AngularEmojisModule
 ];
@@ -21,6 +22,7 @@ const coponents = [
   FooterComponent
 ];
 const materialModules = [
+  MatTableModule,
   MatToolbarModule,
   MatIconModule,
   MatFormFieldModule,
