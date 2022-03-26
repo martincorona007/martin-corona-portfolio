@@ -10,6 +10,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { ContactComponent } from './contact/contact.component';
 import { SharedModule } from '../shared/shared.module';
 import { LandingComponent } from './landing.component';
+import { SheetButtonComponent } from './projects/sheet-button/sheet-button.component';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { LandingComponent } from './landing.component';
     LandingComponent,
     HomeComponent,
     AboutComponent,
-    
+    SheetButtonComponent,
     ProjectsComponent,
     ExperienceComponent,
     BlogsComponent,

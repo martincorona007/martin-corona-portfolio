@@ -1,0 +1,55 @@
+<div fxFlex="grow" fxLayout="column">
+    <div fxFlex="grow" fxLayout="column">
+      <div fxFlex="100" fxLayout="row">
+        <img src="{{imgProject}}" style="height: 100%; width: 100%;">
+      </div>
+      <div fxFlex="100" fxLayout="column">
+        <mat-divider style="width: 100%; background-color: #60caf1; margin: 16px 0px;"></mat-divider>
+        <div fxFlex="100" fxLayout="row">
+          <h2>{{nameProject}}</h2>
+        </div>
+        
+        <div fxFlex="100" fxLayout="row">
+          <a class="font-xmedium-bold">Information about the project</a>
+        </div>
+        <div fxFlex="100" fxLayout="row">
+          <a>{{longInfo}}</a>
+        </div>
+        
+        
+      </div>
+      <div fxFlex="100" fxLayout="row">
+        <a class="font-xmedium-bold">Technologies used</a>
+      </div>
+      <div fxFlex="100" fxLayout="row">
+        <a>{{techUsed}}</a>
+      </div>
+      
+    </div>
+    <div fxFlex="grow" fxLayout="column">
+      <div fxFlex="100" fxLayout="column">
+        
+        <div fxFlex="100" fxLayout="row">
+          <a class="font-xmedium-bold">Links to the project</a>
+        </div>
+        <div fxFlex="100" fxLayout="row">
+          <ng-template *ngIf="isGithubActive; then a" ></ng-template>
+          <ng-template #a><a [attr.href]="linkGithub" ><img src="./assets/imgs/logos/GitHub.png"  style="width: 40px;height: 40px;" class="padding-full imgs-style"></a></ng-template>
+          <ng-template *ngIf="isYoutubeActive; then b"></ng-template>
+          <ng-template #b><a [attr.href]="linkYoutube" ><img src="./assets/imgs/logos/youtube.jpg"  style="width: 40px;height: 40px;" class="padding-full imgs-style"></a></ng-template>
+          <ng-template *ngIf="isWebSiteActive; then d"></ng-template>
+          <ng-template #d><a [attr.href]="linkWebSite" ><img src="./assets/imgs/logos/web.png"  style="width: 40px;height: 40px;" class="padding-full imgs-style"></a></ng-template>
+          
+        </div>
+          
+          
+      </div>
+    </div>
+    <div fxFlex="grow" fxLayout="column">
+      <div fxFlex="100" fxLayout="row" fxLayoutAlign="end end">
+        <button mat-raised-button  color="primary"  (click)="close()">
+          <a>Cerrar</a>
+       </button>
+      </div>
+    </div>
+</div>

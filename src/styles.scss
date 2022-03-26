@@ -1,7 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$light-blue-palette, 300);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$my-white: mat.define-palette(mat.$grey-palette, 50);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   mywhite: $my-white,
+ )
+));
+
+// Emit theme-dependent styles for common features used across multiple components.
+@include mat.core-theme($my-theme);
+
+// Emit styles for MatButton based on `$my-theme`. Because the configuration
+// passed to `define-light-theme` omits typography, `button-theme` will not
+// emit any typography styles.
+@include mat.button-theme($my-theme);
+
 html, body { height: 100%; width: 100%;}
 body { margin: 0; font-family: Quicksand, "Helvetica Neue", sans-serif; }
+
+
+
 .container{
   margin: 20px 80px ;
   width: 80%;
@@ -45,9 +72,18 @@ body { margin: 0; font-family: Quicksand, "Helvetica Neue", sans-serif; }
    font-size: 16px !important;
    font-weight: 600 !important;
  }
+ .font-xmedium-bold{
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
  .card-height{
    min-height: 200px;
  }
+ .zoom-cards:hover {  
+    border: 2px solid #60caf1;
+    cursor: pointer;
+  
+ } 
 /* xlg - Large Devices (Landscape Tablets & Mediam Desktop  )  */
 @media (min-width: 1920px) and (max-width: 2560px){
   .container{
@@ -68,6 +104,16 @@ body { margin: 0; font-family: Quicksand, "Helvetica Neue", sans-serif; }
 }
 /* lg - Large Devices (Landscape Tablets & Mediam Desktop  )  */
 @media (min-width: 1280px) and (max-width: 1919px){
+  .size-bottom-sheet{  
+    min-width: 576px !important;
+    max-width: calc(40vw - 384px) !important;
+
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .size-bottom-sheet::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+  }
   .container{
     margin: 20px 36px;
     width: 95%;
@@ -82,6 +128,15 @@ body { margin: 0; font-family: Quicksand, "Helvetica Neue", sans-serif; }
 }
 /* md - Media Devices (Landscape Tablets & Mediam Desktop  )  */
 @media (min-width: 960px) and (max-width: 1279px){
+  .size-bottom-sheet{  
+    min-width: 576px !important;
+    max-width: calc(40vw - 384px) !important;
+   }
+     /* Hide scrollbar for Chrome, Safari and Opera */
+  .size-bottom-sheet::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+  }
   .container{
     margin: 20px 26px;
     width: 95%;
@@ -96,6 +151,15 @@ body { margin: 0; font-family: Quicksand, "Helvetica Neue", sans-serif; }
 }
 /* sm - Small Devices (Portrait Tablets and Small desktop ) */
 @media (min-width: 600px) and (max-width: 959px){
+  .size-bottom-sheet{  
+    min-width: 576px !important;
+    max-width: calc(40vw - 384px) !important;
+  }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+  .size-bottom-sheet::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  }
   .container{
     margin: 20px 20px;
     width: 95%;

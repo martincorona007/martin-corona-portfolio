@@ -1,8 +1,8 @@
-<div fxFlex="100" fxLayout="column">
+<div fxFlex="100" fxLayout="column" style="padding-top: 30px;">
   <div fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
     <h2>Blogs</h2>
   </div>
-  <mat-divider style="width: 100%; background-color: #60caf1  ;"></mat-divider>
+  <mat-divider style="width: 100%; background-color: #60caf1 ;"></mat-divider>
   <div fxFlex="100" fxLayout="row" fxLayout.xs="column" style="padding-top: 16px;" fxLayoutAlign="center center">
     <table mat-table  [dataSource]="dataSource" class="mat-elevation-z8 ">
 
@@ -19,7 +19,7 @@
       <ng-container matColumnDef="link">
         <th mat-header-cell *matHeaderCellDef> Link </th>
         <td mat-cell *matCellDef="let index">
-           <ng-template *ngIf="index.isMedium; then a"></ng-template>
+          <ng-template *ngIf="index.isMedium; then a"></ng-template>
           <ng-template #a><a [attr.href]="index.linkMedium" ><img src="./assets/imgs/logos/medium.jpg"  style="width: 40px;height: 40px;" class="padding-full imgs-style"></a></ng-template>
           <ng-template *ngIf="index.isDev; then b"></ng-template>
           <ng-template #b><a [attr.href]="index.linkDev"><img src="./assets/imgs/logos/dev-black.png"  style="width: 40px;height: 40px;" class="padding-full imgs-style"></a></ng-template>

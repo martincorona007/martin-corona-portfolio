@@ -15,6 +15,7 @@ import {MatCardModule} from '@angular/material/card';
 import { AngularEmojisModule } from 'angular-emojis';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTableModule} from '@angular/material/table';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 const npmModules = [
   AngularEmojisModule
 ];
@@ -31,7 +32,8 @@ const materialModules = [
   MatButtonModule,
   MatSidenavModule,
   MatCardModule,
-  MatDividerModule
+  MatDividerModule,
+  MatBottomSheetModule
 ];
 const angularModules = [
   FormsModule,

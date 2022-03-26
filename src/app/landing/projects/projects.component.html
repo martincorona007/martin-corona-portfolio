@@ -1,3 +1,33 @@
-<div>
-Projects
+<div fxFlex="100" fxLayout="column" style="padding-top: 30px;">
+  <div fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+    <h2>Projects</h2>
+  </div>
+  <mat-divider style="width: 100%; background-color: #60caf1  ;"></mat-divider>
+  <div  fxFlex="100" fxLayout="row wrap" fxLayout.xs="column" style="padding-top: 16px;;" fxLayoutAlign="center center">
+    <mat-card fxLayout="column" fxLayoutAlign="space-between " style="height: 306px; width: 210px; padding: 8px; border-radius: 8px; margin: 16px; " class="zoom-cards" *ngFor="let index of arrayOfProjects">
+      <div fxFlex="100" fxLayout="column">
+        <div fxLayout="column" >
+          <img src="{{index.imgProject}}" style="height: 100px; width: 195px;">
+        </div>
+      </div>
+      <div fxFlex="100" fxLayout="column">
+        <div fxLayout="column" style="padding-top: 8px;">
+          <div fxFlex="100" fxLayout="row">
+            <a class="font-xmedium-bold">{{index.nameProject}}</a>
+          </div>
+          <div fxFlex="100" fxLayout="row">
+            <a>{{index.shortInfo}}</a>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="100" fxLayout="column" >
+        <div fxFlex="100" fxLayout="row"  fxLayoutAlign="end end">
+          <button mat-button  (click)="openBtnSheet(index.ID_number)">View more</button>
+        </div>
+      </div>
+    </mat-card>
+    
+  </div>
+
 </div>
+
