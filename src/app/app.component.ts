@@ -7,8 +7,6 @@ import {MediaMatcher} from '@angular/cdk/layout';
 })
 export class AppComponent {
   title = 'Martin-Portfolio';
-  public isActiveMenu: boolean = false; 
-  public isActiveContent: boolean = true; 
   
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
@@ -21,14 +19,5 @@ export class AppComponent {
   ngOnInit(){
 
   }
-  clickOff(){
-    this.isActiveMenu = true;
-    this.isActiveContent = false;
-    
-  }
-  clickOn(){
-    this.isActiveMenu = false;
-    this.isActiveContent = true;
-  }
-   
+  
 }

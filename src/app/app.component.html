@@ -1,20 +1,15 @@
 
 <div [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar class="nav-bar"  >
-    <!--MOBILE-->
+    
+    <!--TABLET LAPTOP 4K-->
     <mat-toolbar-row fxShow="false" fxShow.lt-sm="true" style=" z-index: 2; padding: 0px;">
       <div style="margin: 0px;" fxLayoutAlign="center center">
         <div fxLayout="row">
-          <button mat-icon-button class="example-icon" *ngIf="isActiveMenu" (click)="snav.toggle()" (click)="clickOn()">
-            <mat-icon >clear</mat-icon>
-            
-          </button>
-          <button mat-icon-button class="example-icon" *ngIf="isActiveContent" (click)="snav.toggle()" (click)="clickOff()">
+          
+          <button mat-icon-button class="example-icon"  (click)="snav.toggle()" >
             <mat-icon >menu</mat-icon>
-            
           </button>
-          
-          
         </div>
         <div fxLayout="row"  fxLayoutAlign="center center" style="padding-right: 47px;">
           <img src="./assets/imgs/logos/logo.png" style="width: 50%;">
@@ -23,30 +18,20 @@
 
   
     </mat-toolbar-row>
-    <!--TABLET LAPTOP 4K-->
+    <!--MOBILE-->
     <mat-toolbar-row fxShow="false" fxShow.gt-xs="true" fxLayoutAlign="space-between center" class="nav-bar" style=" z-index: 2; padding: 0px;">
     <div fxLayout="row"  >
       <img src="./assets/imgs/logos/logo.png" style="height:100%; width: 100%;">
     </div>
     <div fxLayout="row"  >
-      <button mat-button>
-        HOME
-      </button>
-      <button mat-button>
-        ABOUT
-      </button>
-      <button mat-button>
-        EXPERIENCE
-      </button>
-      <button mat-button>
-        PROJECTS
-      </button>
-      <button mat-button>
-        BLOGS
-      </button>
-      <button mat-button>
-        CONTACT
-      </button>
+        <a href="#home"><button mat-button><a style="color: black;">HOME</a></button></a>
+        <a href="#about"><button mat-button><a style="color: black;">ABOUT</a></button></a>
+        <a href="#experience"><button mat-button><a style="color: black;">EXPERIENCE</a></button></a>
+        <a href="#projects"><button mat-button><a style="color: black;">PROJECTS</a></button></a>
+        <a href="#blogs"><button mat-button><a style="color: black;">BLOGS</a></button></a>
+        <a href="#contact"><button mat-button ><a style="color: black;">CONTACT</a></button></a>
+        <a href="https://drive.google.com/drive/folders/1j0QlvWvE4O4qMlz0sqU1_SUucBjrX-JH?usp=sharing" style="padding-right: 8px;"><button mat-button style="border: 2px solid #189ada"><a style="color: black;">Resume</a></button></a>
+      
     </div>    
   
    
@@ -55,10 +40,19 @@
   </mat-toolbar>
   
   <mat-sidenav-container>
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" style="width: 100%;">
-      AAAAA
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" >
+      <div fxFlex="100" fxLayout="column" fxLayoutAlign="center center"  >
+        <a href="#home" (click)="snav.toggle()"><button mat-button><a style="color: black;">HOME</a></button></a>
+        <a href="#about" (click)="snav.toggle()"><button mat-button><a style="color: black;">ABOUT</a></button></a>
+        <a href="#experience"(click)="snav.toggle()"><button mat-button><a style="color: black;">EXPERIENCE</a></button></a>
+        <a href="#projects" (click)="snav.toggle()"><button mat-button><a style="color: black;">PROJECTS</a></button></a>
+        <a href="#blogs" (click)="snav.toggle()"><button mat-button><a style="color: black;">BLOGS</a></button></a>
+        <a href="#contact" (click)="snav.toggle()"><button mat-button ><a style="color: black;">CONTACT</a></button></a> 
+        <a href="https://drive.google.com/drive/folders/1j0QlvWvE4O4qMlz0sqU1_SUucBjrX-JH?usp=sharing" style="padding-right: 8px;"><button mat-button style="border: 2px solid #189ada"><a style="color: black;">Resume</a></button></a>
+      
+    </div>  
     </mat-sidenav>
-    <mat-sidenav-content style="background-color: #ffffff !important" *ngIf="isActiveContent" class="top-content" style="margin-bottom: 56px;" >
+    <mat-sidenav-content style="background-color: #ffffff !important"  class="top-content" style="margin-bottom: 56px;" >
      
       <router-outlet></router-outlet>
       
